@@ -12,6 +12,12 @@ netxtern: netxtern.o
 netxtern.o: netxtern.cpp
 	g++ -c netxtern.cpp
 
+activitymonitor: activitymonitor.o
+	g++ -g activitymonitor.o -o output.out
+
+activitymonitor.o: activitymonitor.cpp
+	g++ -c activitymonitor.cpp
+
 run: output.out
 	cat in.in | ./output.out
 
