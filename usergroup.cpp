@@ -28,7 +28,6 @@ void UserGroup::printUsers() {
     for(ListIterator listpos = pos->second.begin(); listpos != pos->second.end(); ++listpos) {
       std::cout << "," << *lpos;
     }
-
   }
 }
 
