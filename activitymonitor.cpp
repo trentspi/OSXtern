@@ -32,13 +32,14 @@ int processMonitor::getProcessID() {
 }
 
 int main() {
-  processMonitor p;
+  processMonitor *p = new processMonitor();
   int line;
   while(std::cin >> line) {
-    p.initProcessID(line);
+    p->initProcessID(line);
   }
 
-  int ret = p.getProcessID();
+  int ret = p->getProcessID();
   std::cout << ret << std::endl;
 
+  delete p;
 }
